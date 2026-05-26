@@ -1,0 +1,30 @@
+name: LidarHomeAppliances
+options:
+  bundleIdPrefix: com.haruki
+  deploymentTarget:
+    iOS: "17.0"
+settings:
+  base:
+    DEVELOPMENT_TEAM: ""
+    SWIFT_VERSION: "5.9"
+    PRODUCT_BUNDLE_IDENTIFIER: com.haruki.lidarhomeappliances
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  LidarHomeAppliances:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+    resources:
+      - path: Resources
+    info:
+      path: Resources/Info.plist
+      properties:
+        UILaunchScreen: {}
+        NSCameraUsageDescription: 공간을 스캔하고 가전 배치를 확인하기 위해 카메라를 사용합니다.
+        NSLocalNetworkUsageDescription: 로컬 테스트 서버와 통신할 때 사용합니다.
+    settings:
+      base:
+        CODE_SIGN_STYLE: Automatic
+        TARGETED_DEVICE_FAMILY: "1,2"
